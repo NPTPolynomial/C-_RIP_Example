@@ -115,49 +115,17 @@ void RIP(Router &from, Router &to){
     cout<< "================================================="<<endl;
 }
 
+
+
+
 int main(){
 
-    Router r1;
-
-    Router r2;
-    Router r3;
-
-    r1.name = "router number 1";
-    r1.dest_network[1]=1;
-    r2.dest_network[1]=1;
-    r2.name = "Router number 2";
-//    r3.name = "router number 3";
-
-    cout << r1.name << r2.name << r3.name << endl;
-    cout << r1.dest_network[0] << r2.dest_network[0]<< endl;
-    
-
-
-    //making an array of 7 routers, but only 1 - 6 will be used.
+    //Making an array of 7 routers, but only 1 - 6 will be used.
     //Router0 will not be used.
 
     Router *arrayOfRouters;
 
     arrayOfRouters = new Router[7];
-
-
-//    cout << arrayOfRouters[1].name << endl;
-//    arrayOfRouters[1].name = "Something else that is not nameless";
-    
-//    cout << arrayOfRouters[1].name << endl;
-//    changeNameTo(arrayOfRouters[1], "Router#1");
-//    cout << arrayOfRouters[1].name << endl;
-   
-//    arrayOfRouters[1].addNetwork(1);
-//    arrayOfRouters[1].addNetwork(2);
-//    arrayOfRouters[1].printRoutingTable();
-
-
-    //starting router 2
-//    arrayOfRouters[2].name = "Router#2";
-//    arrayOfRouters[2].addNetwork(2);
-//    arrayOfRouters[2].addNetwork(3);
-//    arrayOfRouters[2].printRoutingTable();
 
 
     //Starting routers 1 - 6
@@ -170,6 +138,8 @@ int main(){
     }
 
 
+
+    // Performing RIP on routers and neighbough routers.
     for(int y = 1; y < 6; y++){
     cout<<endl;
     cout<<"***********************************************************************"<<endl;
@@ -202,6 +172,9 @@ int main(){
     }
 
   
+
+
+    //output final table
     cout<<endl;
     cout<<"***********************************************************************"<<endl;
     cout<<"**********************FINAL TABLES*******************"<<endl;
